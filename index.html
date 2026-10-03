@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FF Sense Lab</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="badge">FREE FIRE • SENSE LAB</div>
+      <h1>Gerador de <span>Sensibilidade</span></h1>
+      <p>Consulte seu perfil pelo UID e gere uma configuração personalizada.</p>
+    </header>
+
+    <section class="card">
+      <h2>1. Identificar jogador</h2>
+      <div class="row">
+        <input id="uid" inputmode="numeric" maxlength="15" placeholder="Digite seu ID/UID">
+        <select id="region"><option value="br">BR</option></select>
+        <button id="consult">Consultar</button>
+      </div>
+      <div id="profile" class="profile hidden"></div>
+      <div id="msg" class="msg"></div>
+    </section>
+
+    <section class="card">
+      <h2>2. Personalizar</h2>
+      <div class="grid">
+        <label>Estilo
+          <select id="style">
+            <option value="balanced">Equilibrado</option>
+            <option value="rush">Rush / capa</option>
+            <option value="precision">Precisão</option>
+          </select>
+        </label>
+        <label>DPI do celular
+          <input id="dpi" type="number" min="300" max="1000" value="450">
+        </label>
+        <label>Modelo
+          <select id="device">
+            <option>Android intermediário</option>
+            <option>Android gamer</option>
+            <option>iPhone</option>
+          </select>
+        </label>
+      </div>
+      <button id="generate" class="primary">🎯 Gerar Sensibilidade</button>
+    </section>
+
+    <section id="result" class="card hidden">
+      <h2>3. Sua configuração</h2>
+      <div class="senses" id="senses"></div>
+      <div class="access">
+        <div><small>ACCESS</small><strong id="access"></strong></div>
+        <button id="copy">Copiar</button>
+      </div>
+      <p class="note">A sensibilidade é uma sugestão calculada; ajuste no jogo conforme seu aparelho e preferência.</p>
+    </section>
+
+    <footer>FF Sense Lab • Projeto independente. Não é afiliado à Garena.</footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
